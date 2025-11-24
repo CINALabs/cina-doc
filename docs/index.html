@@ -13,6 +13,17 @@
     title="docsify-darklight-theme" type="text/css" />
   <!-- Mermaid CSS -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <style>
+    /* Custom CSS to move Dark/Light toggle to top right */
+    #docsify-darklight-theme {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+      bottom: auto;
+      /* Override default bottom positioning */
+    }
+  </style>
 </head>
 
 <body>
@@ -33,11 +44,7 @@
         '/.*/_navbar.md': '/_navbar.md',
         '/.*/_coverpage.md': '/_coverpage.md',
       },
-      nameLink: {
-        '/zh-cn/': '#/zh-cn/',
-        '/en-us/': '#/en-us/',
-        '/': '#/'
-      },
+      // nameLink removed to let Docsify handle routing naturally
       search: {
         paths: 'auto',
         placeholder: {

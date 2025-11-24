@@ -13,3 +13,4 @@ wheels/
 .python-version
 CINA.code-workspace
 main.py
+deployment_guide.md

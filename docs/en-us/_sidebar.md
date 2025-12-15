@@ -5,7 +5,6 @@
 
 * **Savings & Yield (WRMB)**
   * [Product Manual](WRMB_Protocol_Product_Manual)
-  * [User Guide](wrmb-dapp)
   * [Technical Architecture](WRMB_Protocol_Technical_Architecture)
 
 * **Stablecoin & Governance (CINA/f(x))**
@@ -33,3 +32,4 @@
   * [Activity Rules](Activity_Rules)
   * [Ultimate Product Doc](ULTIMATE_PRODUCT_DOCUMENT)
   * [Ultimate Technical Doc](ULTIMATE_TECHNICAL_DOCUMENT)
+  * [Deployment Guide](deployment_guide)

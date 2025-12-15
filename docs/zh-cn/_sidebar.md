@@ -5,7 +5,6 @@
 
 * **储蓄与收益 (WRMB)**
   * [产品手册](WRMB_Protocol_Product_Manual)
-  * [用户指南](wrmb-dapp)
   * [技术架构](WRMB_Protocol_Technical_Architecture)
 
 * **稳定币与治理 (CINA/f(x))**
@@ -33,3 +32,4 @@
   * [活动规则](Activity_Rules)
   * [终极产品文档](ULTIMATE_PRODUCT_DOCUMENT)
   * [终极技术文档](ULTIMATE_TECHNICAL_DOCUMENT)
+  * [部署指南](deployment_guide)

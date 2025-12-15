@@ -106,3 +106,18 @@ graph TD
 ## 4. 整体产品结论
 
 CINA 生态系统是一个设计精巧、富有野心的多协议组合。它没有将所有功能耦合在一个单一协议中，而是通过一个核心的经济模型（由 AMO 模块驱动），将不同协议的优势（WRMB 的资本沉淀能力、CINA 的治理和价值捕获能力）有机地结合在一起，形成了一个可以自我强化的价值闭环。
+
+---
+
+## 5. 代码库导航
+
+以下是组成 CINA 生态系统的核心数据仓库的详细索引：
+
+### 核心协议
+*   **[WRMB-protocol-contracts](https://github.com/CINALabs/WRMB-protocol-contracts)**: 储蓄系统的骨干，包括 `WRMB.sol` (代币), `SavingsVault.sol` (收益) 和 `WRMBBondPool.sol`。
+*   **[CINA-protocol-contracts](https://github.com/CINALabs/CINA-protocol-contracts)**: 治理和稳定币层，管理 `CINA` 代币逻辑和 `fxUSD` 稳定机制。
+*   **[v4-pool-amo](https://github.com/CINALabs/v4-pool-amo)**: 经济引擎。一个 Uniswap v4 Hook 模板，执行自动化市场操作以连接 WRMB 和 CINA 的价值。
+
+### 用户界面
+*   **[cina-official-website](https://github.com/CINALabs/cina-official-website)**: 生态系统的主要着陆页和品牌门户。
+*   **[wrmb-dapp](https://github.com/CINALabs/wrmb-dapp)**: 用户封装 RMB 和与储蓄金库交互的主要 DApp。

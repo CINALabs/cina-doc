@@ -12,33 +12,33 @@ The diagram below clearly illustrates the full picture of the CINA ecosystem and
 
 ```mermaid
 graph TD
-    subgraph A [Users & External Markets]
+    subgraph A ["Users & External Markets"]
         U[User]
-        M[Secondary Market, e.g., Uniswap]
+        M["Secondary Market, e.g., Uniswap"]
     end
 
-    subgraph B [Website & DApps]
+    subgraph B ["Website & DApps"]
         W[cina-official-website]
         D1[wrmb-dapp]
         D2[wrap-dapp]
         D3[CINA-Dex-trading-system-interface]
     end
 
-    subgraph C [Core Protocol Layer]
-        subgraph C1 [WRMB Savings Protocol]
+    subgraph C ["Core Protocol Layer"]
+        subgraph C1 ["WRMB Savings Protocol"]
             P1[WRMB-protocol-contracts]
             SV[SavingsVault]
         end
-        subgraph C2 [CINA/f(x) Protocol]
+        subgraph C2 ["CINA/f(x) Protocol"]
             P2[CINA-protocol-contracts]
-            CV[CINA Staking Vault]
+            CV["CINA Staking Vault"]
         end
-        subgraph C3 [AMO Value Bridge]
+        subgraph C3 ["AMO Value Bridge"]
             AMO[v4-pool-amo]
         end
     end
     
-    subgraph E [Management Tools]
+    subgraph E ["Management Tools"]
         ADM[admin-dapp]
     end
 
@@ -106,3 +106,18 @@ graph TD
 ## 4. Overall Product Conclusion
 
 The CINA ecosystem is a sophisticated and ambitious multi-protocol combination. It does not couple all functions into a single protocol but organically combines the strengths of different protocols (WRMB's capital accumulation capability, CINA's governance and value capture capability) through a core economic model (driven by the AMO module), forming a value loop that can reinforce itself.
+
+---
+
+## 5. Codebase Navigation
+
+Below is a detailed index of the core data repositories that make up the CINA ecosystem:
+
+### Core Protocols
+*   **[WRMB-protocol-contracts](https://github.com/CINALabs/WRMB-protocol-contracts)**: The backbone of the savings system, including `WRMB.sol` (token), `SavingsVault.sol` (yield), and `WRMBBondPool.sol`.
+*   **[CINA-protocol-contracts](https://github.com/CINALabs/CINA-protocol-contracts)**: The governance and stablecoin layer, managing `CINA` token logic and `fxUSD` stability mechanisms.
+*   **[v4-pool-amo](https://github.com/CINALabs/v4-pool-amo)**: The economic engine. A Uniswap v4 Hook template that executes automated market operations to bridge value between WRMB and CINA.
+
+### User Interfaces
+*   **[cina-official-website](https://github.com/CINALabs/cina-official-website)**: The main landing page and brand portal for the ecosystem.
+*   **[wrmb-dapp](https://github.com/CINALabs/wrmb-dapp)**: The primary DApp for users to wrap RMB and interact with the Savings Vault.

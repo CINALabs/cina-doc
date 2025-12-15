@@ -133,25 +133,8 @@
         depth: 6
       },
       markdown: {
-        renderer: {
-          code: function (code, lang) {
-            var isMermaid = lang && (lang.trim().toLowerCase() === "mermaid");
-            if (isMermaid) {
-              return (
-                '<div class="mermaid">' + code + "</div>"
-              );
-            }
-            return this.origin.code.apply(this, arguments);
-          }
-        }
-      },
-      plugins: [
-        function (hook) {
-          hook.doneEach(function () {
-            mermaid.init(undefined, ".mermaid");
-          });
-        }
-      ]
+        // Custom renderer removed - relying on docsify-mermaid plugin
+      }
     }
   </script>
   <!-- Docsify v4 -->
@@ -166,6 +149,12 @@
 
   <!-- Mermaid v9.4.3 (Synchronous API support) -->
   <script src="//cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
+  <!-- Docsify Mermaid Plugin -->
+  <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
+
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
 </body>
 
 </html>

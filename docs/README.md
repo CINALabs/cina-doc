@@ -21,7 +21,8 @@ graph TD
         W[cina-official-website]
         D1[wrmb-dapp]
         D2[wrap-dapp]
-        D3[CINA-Dex-trading-system-interface]
+        D3[CINA-Trade]
+        D4[CINA-Dex-trading-system-interface]
     end
 
     subgraph C ["Core Protocol Layer"]
@@ -46,9 +47,10 @@ graph TD
     U -- "Visit" --> W
     U -- "Use" --> D1
     U -- "Use" --> D2
-    U -- "Use (Trading Strategy)" --> D3
+    U -- "Use (Trade)" --> D3
+    U -- "Use (Trading Strategy)" --> D4
     
-    W -.-> D1 & D2 & D3;
+    W -.-> D1 & D2 & D3 & D4;
 
     D1 & D2 -- "Interact" --> P1
     
@@ -66,7 +68,7 @@ graph TD
     classDef dapp fill:#117A65,stroke:#fff,color:#fff;
     classDef bridge fill:#B7950B,stroke:#fff,color:#fff;
     class P1,P2 protocol
-    class D1,D2,D3 dapp
+    class D1,D2,D3,D4 dapp
     class AMO bridge
 ```
 
@@ -94,14 +96,15 @@ graph TD
     *   **It perfectly transforms the capital efficiency of the WRMB Protocol into value support for the CINA Protocol.**
 
 ### 3.3. User Application Layer
-*   **`cina-official-website`:** The unified brand image and information portal of the ecosystem.
-*   **`wrmb-dapp` / `wrap-dapp`:** User interfaces for the WRMB Protocol, responsible for the two core operations of "Savings" and "Wrapping".
-*   **`CINA-Dex-trading-system-interface`:** An independent automated trading strategy platform for advanced users (based on Bancor Carbon). Although technically independent, it is integrated into the CINA ecosystem in terms of product and branding as a "high-end product line" to attract professional traders.
+*   **`cina-official-website`** [Active]: The unified brand image and information portal of the ecosystem.
+*   **`wrmb-dapp` / `wrap-dapp`** [Active]: User interfaces for the WRMB Protocol, responsible for the two core operations of "Savings" and "Wrapping".
+*   **`cina_trade`** [New]: A modern trading interface for CINA Protocol V2, supporting leveraged positions via flash loans.
+*   **`CINA-Dex-trading-system-interface`** [Maintenance]: An independent automated trading strategy platform (based on Bancor Carbon).
 
-### 3.4. Internal Management & Experimental Projects
-*   **`admin-dapp`:** Internal management dashboard for the WRMB Protocol, used by administrators to maintain protocol operations.
-*   **`digital-fund` / `digital-fund-backend`:** A set of independent projects unrelated to the current core ecosystem (Digital Fund Admin Panel and NFT Marketplace API), likely legacy or new projects under incubation.
-*   **`ETHShanghai-2025`:** A functional demo of the CINA/f(x) Protocol, showcasing its powerful composability in flash loans and leveraged trading.
+### 3.4. Internal Management & Historical Projects
+*   **`admin-dapp`**: Internal management dashboard for the WRMB Protocol.
+*   **`digital-fund` / `digital-fund-backend`** [ARCHIVED]: Legacy projects for Digital Fund Admin Panel and NFT Marketplace.
+*   **`ETHShanghai-2025`**: A functional demo of the CINA/f(x) Protocol.
 
 ## 4. Overall Product Conclusion
 
@@ -119,5 +122,6 @@ Below is a detailed index of the core data repositories that make up the CINA ec
 *   **[v4-pool-amo](https://github.com/CINALabs/v4-pool-amo)**: The economic engine. A Uniswap v4 Hook template that executes automated market operations to bridge value between WRMB and CINA.
 
 ### User Interfaces
-*   **[cina-official-website](https://github.com/CINALabs/cina-official-website)**: The main landing page and brand portal for the ecosystem.
-*   **[wrmb-dapp](https://github.com/CINALabs/wrmb-dapp)**: The primary DApp for users to wrap RMB and interact with the Savings Vault.
+*   **[cina-official-website](https://github.com/CINALabs/cina-official-website)**: The main landing page and brand portal.
+*   **[wrmb-dapp](https://github.com/CINALabs/wrmb-dapp)**: The primary DApp for WRMB savings interactions.
+*   **[cina_trade](https://github.com/CINALabs/cina_trade)**: Our high-performance trading interface for leveraged positions.
